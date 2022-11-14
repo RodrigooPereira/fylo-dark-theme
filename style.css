@@ -34,6 +34,12 @@ nav a {
     color: white;
 }
 
+nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+}
+
 .first {
     background-image: url(imagens/bg-curvy-desktop.svg);
     background-repeat: no-repeat;
@@ -90,6 +96,10 @@ nav a {
     text-decoration: none;
     padding: 15px 90px;
     border-radius: 30px;
+}
+
+.get-started a:hover {
+    background:hsl(176, 68%, 64%);
 }
 
 .second {
@@ -320,9 +330,14 @@ form button {
     padding: 0 25px;
     border-radius: 25px;
     border: none;
+    cursor: pointer;
     color: white;
     background: linear-gradient(to left, hsl(198, 60%, 50%), hsl(176, 68%, 64%));
     font-weight: bolder;
+}
+
+form button:hover {
+    background: hsl(176, 68%, 64%);
 }
 
 /* FOOTER */
@@ -402,6 +417,12 @@ footer {
     color: white;
 }
 
+.footer-content-small ul li a:hover {
+    font-weight: bolder;
+    margin-left: 2px;
+    transition: all 200ms ease;
+}
+
 .footer-content-small nav {
     display: flex;
 }
@@ -412,6 +433,12 @@ footer {
     height: fit-content;
     border-radius: 25px;
     border: solid 1.5px white;
+}
+
+.footer-content-small nav a:hover {
+    border: solid 1.5px hsl(176, 68%, 64%);
+    color: hsl(176, 68%, 64%);
+    transition: all 300ms ease;
 }
 
 @media (max-width: 850px) {
@@ -667,11 +694,7 @@ footer {
         margin-top: 10px;
         justify-content: center;
     }
-    
-    .footer-content-small ul {
-        list-style: none;
-    }
-    
+
     .footer-content-small nav a {
         margin: 0 5px;
         padding: 6px 9px;
